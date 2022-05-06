@@ -1,0 +1,37 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type CoffeesTypeGraphql {
+  id: ID!
+  title: String!
+  ratio: Float
+  cup: Float
+  description: String
+}
+
+type Query {
+  getAllCoffees: [CoffeesTypeGraphql!]!
+  getCoffees(id: String!): CoffeesTypeGraphql!
+}
+
+type Mutation {
+  addOneCoffees(Coffees: CoffeesInsertTypeGraphql!): CoffeesTypeGraphql!
+  updateCoffees(Coffees: CoffeesInputTypeGraphql!): CoffeesTypeGraphql!
+  deleteOneCoffees(id: String!): Boolean!
+}
+
+input CoffeesInsertTypeGraphql {
+  title: String!
+  ratio: Float
+  cup: Float
+  description: String
+}
+
+input CoffeesInputTypeGraphql {
+  id: ID!
+  ratio: String!
+  price: Float
+  cup: Float
+  description: String
+}
